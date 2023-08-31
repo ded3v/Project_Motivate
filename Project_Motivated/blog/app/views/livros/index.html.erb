@@ -1,0 +1,15 @@
+<h1>Lista de Livros</h1>
+
+<ul>
+  <% @livros.each do |livro| %>
+    <li>
+      <strong><%= livro.title %></strong>
+      <p>Autor: <%= livro.author %></p>
+      <p>Avaliação: <%= livro.rating %></p>
+      <p>Sinopse: <%= livro.synopsis %></p>
+      <%= link_to 'Editar', editar_livro_path(livro) %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to 'Adicionar Livro', novo_livro_path %>

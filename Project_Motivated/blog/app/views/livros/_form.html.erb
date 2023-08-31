@@ -1,0 +1,21 @@
+<%= form_for @livro, url: atualizar_livro_path(@livro), method: :patch do |f| %>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= f.label :author %>
+    <%= f.text_field :author %>
+  </div>
+  <div>
+    <%= f.label :rating %>
+    <%= f.number_field :rating, min: 0, max: 5 %>
+  </div>
+  <div>
+    <%= f.label :synopsis %>
+    <%= f.text_area :synopsis %>
+  </div>
+  <div>
+    <%= f.submit "Salvar Alterações" %>
+  </div>
+<% end %>
